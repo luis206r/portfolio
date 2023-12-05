@@ -1,0 +1,33 @@
+.container{
+    display :flex;
+    justify-content: space-between;
+}
+
+.navItem{
+    padding: 15px;
+}
+
+.navContentCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    margin: 10px;
+    padding: 5px;
+    background-color: #ebe5e8;
+    border-radius: 25px;
+}
+
+
+.navItemCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: #fffeff;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+
+
+
