@@ -82,6 +82,14 @@ body{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
 }
 
+.bottomleft{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items:flex-end;
+}
+
 .v{
     padding: 8px;
     display: flex;
