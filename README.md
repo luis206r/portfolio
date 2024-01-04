@@ -2,7 +2,7 @@
 
 Proyecto en desarrollo
 
-<span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/luis206r/portfolio/master/public/home.gif</span><span>)</span>
+![Texto alternativo](public/home.gif)
 
 Este proyecto se está realizando con tecnologías de node y react
 
