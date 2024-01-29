@@ -72,7 +72,7 @@ export const Home = () => {
           </div>
 
           <div className={s.grid}>
-            <div className={s.x2}>
+            <div className={s.x22}>
               <div
                 className={s.appleMusicCard}
                 onMouseOver={() => setIsHovered(true)}
@@ -80,16 +80,16 @@ export const Home = () => {
             >   
                     <div className={`${s.fondo} ${isHovered ? s.blur : ""}`}>
                     <img className={s.imageProf} src="./apple-music.svg" />
-
+                    <p style={{marginTop:"15px", marginBottom:"0"}}>Some of my music</p>
                     </div>
                 
                 <iframe
                   allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
                   //frameBorder={0}
-                  //height={450}
+                  
                   style={{
-                    width: "100%",
-                    maxWidth: 660,
+                    width:"100%",
+                    //maxWidth: 800,
                     overflow:"hidden",
                     height: "100%",
                     border:0,
