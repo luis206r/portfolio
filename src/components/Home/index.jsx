@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Navbar } from "../Navbar";
 import s from "./style.module.scss";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
-    
-    const [isHovered, setIsHovered] = useState(false);
-
+  const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div>
-      <Navbar />
       <div className={s.bigcontainer}>
         <div className={s.container}>
           <div className={s.grid}>
@@ -65,47 +63,50 @@ export const Home = () => {
               </div>
             </div>
             <div className={s.x2}>
-              <div className={s.card}>
-                <img src="https://skillicons.dev/icons?i=git,bootstrap,cpp,java,css,discord,express,sequelize,github,html,js,linux,md,materialui,mysql,nextjs,postgres,nodejs,postman,py,react,redux,vscode&perline=9" />
+              <div className={s.card}
+                style={{
+                  backgroundImage: 'url("./projects2.webp")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  padding:"0px",
+                }}
+                onClick={(e)=>{e.preventDefault(); navigate("/projects")}}
+              >
+                {/* <img src="https://skillicons.dev/icons?i=git,bootstrap,cpp,java,css,discord,express,sequelize,github,html,js,linux,md,materialui,mysql,nextjs,postgres,nodejs,postman,py,react,redux,vscode&perline=9" /> */}
+                <div className={s.middleInsideCard}>
+                  <h1>See my projects ↗️</h1>
+                </div>
+
               </div>
             </div>
           </div>
-
           <div className={s.grid}>
-            <div className={s.x22}>
-              <div
-                className={s.appleMusicCard}
-                onMouseOver={() => setIsHovered(true)}
-                onMouseOut={() => setIsHovered(false)}
-            >   
-                    <div className={`${s.fondo} ${isHovered ? s.blur : ""}`}>
-                    <img className={s.imageProf} src="./apple-music.svg" />
-                    <p style={{marginTop:"15px", marginBottom:"0"}}>Some of my music</p>
-                    </div>
-                
-                <iframe
-                  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-                  //frameBorder={0}
-                  
-                  style={{
-                    width:"100%",
-                    //maxWidth: 800,
-                    overflow:"hidden",
-                    height: "100%",
-                    border:0,
-                    borderRadius: 30,
-                  }}
-                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                  src="https://embed.music.apple.com/pe/playlist/favs/pl.u-NpXmzemC4JDAb1r?l=en-GB"
-                />
-              </div>
+            <div className={s.x2}>
+              <div className={s.card}>Contenido</div>
             </div>
             <div className={s.x1}>
-              <div className={s.card}>contenido</div>
+              <div
+                className={s.card}
+                style={{
+                  backgroundImage: 'url("./linkedin2.svg")',
+                  backgroundSize: "cover", // ajusta el tamaño de la imagen para cubrir completamente el div
+                  backgroundPosition: "center",
+                  backgroundColor: "#0b86ca",
+                }}
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/in/luis-robledo-7723a01b6",
+                    "_blank"
+                  );
+                }}
+              >
+                <div className={s.bottomleft}>
+                  <img src="./link.png" style={{ width: "30px" }} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
         <div className={s.container}>
           <div className={s.v}>
             <div className={s.card}>
@@ -129,7 +130,6 @@ export const Home = () => {
                   <li>Route management</li>
                   <li>Many other things</li>
                 </list>
-
                 <h2>⚙️ Back end</h2>
                 <list>
                   <li>Node JS</li>
@@ -142,22 +142,43 @@ export const Home = () => {
               </div>
             </div>
           </div>
-
           <div className={s.x1}>
-            <div className={s.card}
-            style={{
-                backgroundImage: 'url("./linkedin2.svg")',
-                backgroundSize: "cover", // ajusta el tamaño de la imagen para cubrir completamente el div
-                backgroundPosition: "center",
-                backgroundColor:"#0b86ca"
-              }}
-              onClick={() => {
-                window.open("https://www.linkedin.com/in/luis-robledo-7723a01b6", "_blank");
-              }}
-            >
-            <div className={s.bottomleft}>
-                  <img src="./link.png" style={{ width: "30px" }} />
+            <div className={s.card} style={{ padding: "0px ", margin: "0px" }}>
+              <div
+                className={s.appleMusicCard}
+                onMouseOver={() => setIsHovered(true)}
+                onMouseOut={() => setIsHovered(false)}
+              >
+                <div
+                  className={`${s.fondo} ${isHovered ? s.blur : ""}`}
+                  style={{
+                    background: "linear-gradient(to bottom, #fd4f62, #fd375b)",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      backgroundImage: 'url("./apple-music.svg")',
+                      backgroundSize: "cover", // ajusta el tamaño de la imagen para cubrir completamente el div
+                      backgroundPosition: "center",
+                    }}
+                  ></div>
                 </div>
+                <iframe
+                  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                  style={{
+                    width: "100%",
+                    //maxWidth: 800,
+                    overflow: "hidden",
+                    height: "100%",
+                    border: 0,
+                    borderRadius: 30,
+                  }}
+                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                  src="https://embed.music.apple.com/pe/playlist/favs/pl.u-NpXmzemC4JDAb1r?l=en-GB"
+                />
+              </div>
             </div>
           </div>
         </div>

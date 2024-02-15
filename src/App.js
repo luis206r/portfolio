@@ -1,28 +1,35 @@
 import logo from './logo.svg';
-import './App.css';
 import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
+import { Projects } from './components/Projects';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  useEffect(()=>{
+    if(location.pathname ==='/'){
+      navigate("/home")
+    }
+  },[])
+
   return (
-    <div className="App">
-      {/* <Navbar/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <Home/>
-    </div>
+    <>
+    <Navbar/>
+      <Routes>
+          <Route path="home"
+            element={
+              <Home/>
+            }
+          />
+          <Route path="projects"
+            element={
+              <Projects/>
+            }
+          />
+      </Routes>
+    </>
   );
 }
 

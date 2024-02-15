@@ -1,0 +1,94 @@
+.modalContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(7.5px);
+    z-index:5;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    transition: opacity 0.5s ease-in-out;
+    &.visible {
+        opacity: 1;
+      }
+    
+      &.hidden {
+        opacity: 0;
+        pointer-events: none; 
+      }
+}
+
+
+.modal{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 35px;
+    position: absolute;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+
+.customButtonClose{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    padding: 5px;
+    background-color: #f5222d;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,transform 0.3s ease;
+}
+
+.customButtonClose:hover{
+    box-shadow: 0 0 20px 0px rgba(230, 63, 63, 0.776);
+}
+
+.customButtonClose:active{
+    transform: scale(0.9);
+    background-color: #96181f;
+}
+
+.customForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 30px;
+    height: 400px;
+}
+
+.inlineInputName{
+    display:flex;
+}
+
+.customButton{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: #1596f1;
+    border-radius: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.customButton:hover{
+    box-shadow: 0 0 20px 0px rgba(48, 135, 210, 0.776);
+}
+
+.customButton:active{
+    transform: scale(0.9);
+    background-color: #1687d7;
+}

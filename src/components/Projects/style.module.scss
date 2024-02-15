@@ -1,0 +1,40 @@
+.container{
+    margin-top: 37px;
+    margin-bottom: 30px;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    align-items: center;
+}
+
+.subContainer{
+    display:flex;
+    flex-direction:row;
+    background-color: #fffeff;
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 30px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.subContainer:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+.scHalf{
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    justify-content: center;
+    //background-color: yellow;
+    width: 50%;
+    padding: 10px;
+}
+
+.img{
+    border-radius: 30px;
+    width: 100%;
+}

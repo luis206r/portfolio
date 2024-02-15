@@ -4,6 +4,8 @@
 }
 
 .navItem{
+    display: flex;
+    align-items: center;
     padding: 15px;
 }
 
@@ -18,7 +20,7 @@
 }
 
 
-.navItemCenter{
+.customButton{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,8 +28,19 @@
     background-color: #fffeff;
     border-radius: 18px;
     padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,transform 0.3s ease;
 }
 
+.customButton:hover{
+    background-color: #1596f1;
+    color: white;
+    box-shadow: 0 0 20px 0px rgba(48, 135, 210, 0.776);
+}
+
+.customButton:active{
+    transform: scale(0.9);
+    background-color: #1687d7;
+}
 
 
 
