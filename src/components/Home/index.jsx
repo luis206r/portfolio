@@ -11,13 +11,17 @@ export const Home = () => {
         <div className={s.container}>
           <div className={s.grid}>
             <div className={s.x2}>
-              <div className={s.card}>
+              <div className={s.card}
+                 style={{
+                  background: "linear-gradient(to top right, #eeeded, #ade0fa)"
+                }}
+              >
                 <div className={s.info}>
                   <img className={s.imageProf} src="./zyro-image2.png" />
                   <div className={s.text}>
                     <h1>About me:</h1>
                     <p>
-                      I'm a <b>Fullstack Developer</b> and also a{" "}
+                      I'm a <b>Fullstack Developer</b> and also a
                       <b>Computer Science student</b> from Lima, Perú. I'm
                       interested in Node, React, C++, Startups, games and music
                       🕹️🎧
@@ -47,7 +51,12 @@ export const Home = () => {
 
           <div className={s.grid}>
             <div className={s.x1}>
-              <div className={s.card}>
+              <div className={s.card}
+                style={{
+                  color:"white",
+                  background: "linear-gradient(to top right, #1761fe, #777aec)"
+                }}
+              >
                 <div className={s.text}>
                   <h2>Programming Laguages and IDE's:</h2>
                   <list>
@@ -82,7 +91,14 @@ export const Home = () => {
           </div>
           <div className={s.grid}>
             <div className={s.x2}>
-              <div className={s.card}>Contenido</div>
+              <div className={s.card}
+                style={{
+                  color:"white",
+                  background: "linear-gradient(to top right, #5acbf5, #55e9cb)"
+                }}
+              >
+              <img src="https://skillicons.dev/icons?i=git,bootstrap,cpp,java,css,tailwind,ts,discord,nextjs,docker,express,sequelize,github,html,js,linux,md,materialui,mysql,nextjs,postgres,nodejs,postman,py,react,redux,vscode&perline=9" /> 
+              </div>
             </div>
             <div className={s.x1}>
               <div
@@ -109,16 +125,20 @@ export const Home = () => {
         </div>
         <div className={s.container}>
           <div className={s.v}>
-            <div className={s.card}>
+            <div className={s.card}
+              style={{
+                background: "linear-gradient(to top, #ddc3fc, #90c5fb)"
+              }}
+            >
               <div className={s.text}>
                 <h1>Main Skills:</h1>
                 <h2>🖌️ Front end</h2>
                 <list>
                   <li>
-                    <b>React environment</b>
+                    <b>ReactJs</b>
                   </li>
                   <li>
-                    <b>React libraries</b>
+                    <b>NextJs</b>
                   </li>
                   <li>
                     <b>Redux</b>
@@ -126,18 +146,18 @@ export const Home = () => {
                   <li>
                     <b>Axios</b> and <b>Fetch</b>
                   </li>
-                  <li>UI kits</li>
-                  <li>Route management</li>
-                  <li>Many other things</li>
+                  <li>Tailwind, Boostrap, Bulma</li>
+                  <li>Sass</li>
+                  <li><b>Antd</b>, MaterialUI</li>
                 </list>
                 <h2>⚙️ Back end</h2>
                 <list>
-                  <li>Node JS</li>
+                  <li><b>Node JS</b></li>
                   <li>Postgresql</li>
+                  <li>My SQL</li>
                   <li>Sequelize</li>
                   <li>Express</li>
-                  <li>Authentication methods</li>
-                  <li>And more</li>
+                  <li>bcrpyt, JWT</li>
                 </list>
               </div>
             </div>

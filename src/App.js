@@ -4,6 +4,7 @@ import { Home } from './components/Home';
 import { Projects } from './components/Projects';
 import { useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { About } from './components/About';
 
 function App() {
   const navigate = useNavigate();
@@ -26,6 +27,11 @@ function App() {
           <Route path="projects"
             element={
               <Projects/>
+            }
+          />
+          <Route path="about"
+            element={
+              <About/>
             }
           />
       </Routes>
