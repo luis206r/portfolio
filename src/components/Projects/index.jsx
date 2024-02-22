@@ -87,6 +87,7 @@ export const Projects = () => {
               boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
             }}
           />
+          &nbsp;
           <img
             src="./tmdb_scs2.png"
             width="100%"
@@ -118,6 +119,7 @@ export const Projects = () => {
               boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
             }}
           />
+          &nbsp;
           <img
             src="./mtw_scs2.png"
             width="100%"

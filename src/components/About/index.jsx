@@ -22,7 +22,7 @@ console.log(`El idioma del navegador es: ${idiomaNavegador}`);
                 <img src="./prof-transformed.png" className={s.imgProf} />
                 <div className={s.head1Info}>
                 <div>
-                <h1>Luis Roledo</h1>
+                <h1>Luis Robledo</h1>
                 <p> <MdWork /> &nbsp; Full Stack Dev</p>
                 <p> <FaCity /> &nbsp; Lima, Perú</p>
                 <p> <PiStudentBold />&nbsp; CS-UTEC</p>
@@ -77,7 +77,7 @@ console.log(`El idioma del navegador es: ${idiomaNavegador}`);
               the Backend side. The majority of projects in which I have
               participated have been developed with Postgresql, Express, and
               Sequelize. Additionally, I am familiar with working with MySQL,
-              and I have been learning MongoDBand AWS.
+              and I have been learning MongoDB and AWS.
             </p>
 
             <p>

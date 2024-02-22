@@ -42,10 +42,7 @@ export const Home = () => {
                   <div className={s.text}>
                     <h1>About me:</h1>
                     <p>
-                      I'm a <b>Fullstack Developer</b> and also a
-                      <b>Computer Science student</b> from Lima, Perú. I'm
-                      interested in Node, React, C++, Startups, games and music
-                      🕹️🎧
+                      I'm a <b>Fullstack Developer</b> and also a <b>Computer Science student</b> from Lima, Perú. I'm interested in Node, React, C++, Startups, games and music 🕹️🎧
                     </p>
                   </div>
                 </div>
@@ -179,6 +176,7 @@ export const Home = () => {
                   <li>Sequelize</li>
                   <li>Express</li>
                   <li>bcrpyt, JWT</li>
+                  <li>jest, supertest</li>
                 </list>
               </div>
             </div>

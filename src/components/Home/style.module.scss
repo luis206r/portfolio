@@ -2,7 +2,7 @@ body{
     background-color: #f7eff0;
     color: #525252;
     
-    font-family: 'Manrope', sans-serif;  
+    //font-family: Imported, sans-serif;  
 }
 @media (prefers-color-scheme: dark) {
     body {
@@ -233,3 +233,6 @@ b{
     font-size: 16px;
 }
 
+h1{
+    font-family: 'SFD';
+}
