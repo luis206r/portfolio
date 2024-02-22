@@ -10,7 +10,7 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   useEffect(()=>{
-    if(location.pathname ==='/'){
+    if(location.pathname ==='/' || ''){
       navigate("/home")
     }
   },[])

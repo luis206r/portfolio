@@ -38,7 +38,7 @@ export const Home = () => {
                 }}
               >
                 <div className={s.info}>
-                  <img className={s.imageProf} src="./zyro-image2.png" />
+                  <img className={s.imageProf} src='./portfolio/zyro-image2.jpg'/>
                   <div className={s.text}>
                     <h1>About me:</h1>
                     <p>
