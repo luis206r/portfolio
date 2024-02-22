@@ -38,7 +38,7 @@ export const Home = () => {
                 }}
               >
                 <div className={s.info}>
-                  <img className={s.imageProf} src='zyro-image2.jpg'/>
+                  <img className={s.imageProf} src='https://github.com/luis206r/portfolio/blob/master/public/zyro-image2.png?raw=true'/>
                   <div className={s.text}>
                     <h1>About me:</h1>
                     <p>
