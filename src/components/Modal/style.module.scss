@@ -31,6 +31,13 @@
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
 }
 
+@media (prefers-color-scheme: dark) {
+    .modal {
+      background-color: #1a1a1a;
+      color: #dbdbdb;
+    }
+  }
+
 .title{
     display:flex;
     flex-direction: row;
@@ -104,4 +111,39 @@
     border-radius: 18px;
     padding: 10px;
     pointer-events: none;
+}
+
+.antdInputDark{
+    background-color: black !important;
+    border-color: #373636;
+    color: #dbdbdb !important;
+}
+
+.antdInputDark input::placeholder{
+    color: #8d8d8d  !important;
+}
+
+.antdInputDark::placeholder{
+    color: #8d8d8d  !important;
+}
+
+
+// .antdInputDark:focus{
+//     background-color: black;
+//     border-color: #373636;
+// }
+
+.antdInputDark:hover{
+    background-color: black !important;
+    border-color: #373636 ;
+}
+.antdInputDark:not(:hover){
+    background-color: black !important;
+    border-color: #373636 ;
+}
+
+.popOverTitle{
+    color:red;
+    display:flex;
+    align-items: center;
 }

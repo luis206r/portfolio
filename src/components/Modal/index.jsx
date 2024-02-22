@@ -7,13 +7,33 @@ import TextArea from "antd/es/input/TextArea";
 import emailjs from "@emailjs/browser";
 import { CiCircleAlert } from "react-icons/ci";
 import { LoadingOutlined } from "@ant-design/icons";
-
+import { FaUser } from "react-icons/fa";
+import { FaBuilding } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
+import { FaQuestionCircle } from "react-icons/fa";
 
 export const Modal = ({ onClose }) => {
   const form = useRef();
   const [mostrarDiv, setMostrarDiv] = useState(false);
   const [mostrarPopEmail, setMostrarPopEmail] = useState(false);
   const [sumbitClickable, setSubmitClickable] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const matchMediaDark = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(matchMediaDark.matches);
+  
+    const handleChange = (event) => {
+      setIsDarkMode(event.matches);
+    };
+  
+    matchMediaDark.addListener(handleChange);
+  
+    return () => {
+      matchMediaDark.removeListener(handleChange);
+    };
+  }, []);
+
   const [formValues, setFormValues] = useState({
     firstName: "",
     lastName: "",
@@ -139,35 +159,38 @@ export const Modal = ({ onClose }) => {
               <Input
                 status={formStatus.firstName}
                 placeholder="first name"
-                prefix={"👷"}
+                prefix={<><FaUser />&nbsp;&nbsp;</>}
                 value={formValues.firstName}
                 name="firstName"
                 onChange={onChangeInput}
                 size="large"
+                className={`${isDarkMode ? s.antdInputDark:''}`}
               />
               &nbsp;&nbsp;
               <Input
               status={formStatus.lastName}
                 placeholder="last name"
-                prefix={"👷"}
+                prefix={<><FaUser />&nbsp;&nbsp;</>}
                 value={formValues.lastName}
                 name="lastName"
                 onChange={onChangeInput}
                 size="large"
+                className={`${isDarkMode ? s.antdInputDark:''}`}
               />
             </div>
             <Input
             status={formStatus.company}
               type="text"
               placeholder="company"
-              prefix={"🏢"}
+              prefix={<><FaBuilding />&nbsp;&nbsp;</>}
               value={formValues.company}
               name="company"
               onChange={onChangeInput}
               size="large"
+              className={`${isDarkMode ? s.antdInputDark:''}`}
             />
             <Popover
-                title={<span style={{ color: 'red',display:"flex", alignItems:"center"}}><CiCircleAlert />
+                title={<span className={s.popOverTitle}><CiCircleAlert />
                 &nbsp; Insert a valid email</span>}
                 open={mostrarPopEmail}
                 placement="topLeft"
@@ -178,33 +201,35 @@ export const Modal = ({ onClose }) => {
               type="email"
               placeholder="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              prefix={"✉️"}
+              prefix={<><IoMail />&nbsp;&nbsp;</>}
               value={formValues.email}
               name="email"
               onChange={onChangeInput}
               required
               size="large"
+              className={`${isDarkMode ? s.antdInputDark:''}`}
             />
             </Popover>
             <Input
               status={formStatus.subject}
               type="subject"
               placeholder="subject"
-              prefix={"❔"}
+              prefix={<><FaQuestionCircle />&nbsp;&nbsp;</>}
               value={formValues.subject}
               name="subject"
               onChange={onChangeInput}
               size="large"
+              className={`${isDarkMode ? s.antdInputDark:''}`}
             />
             <TextArea
               status={formStatus.body}
               placeholder="Body"
               rows={7}
-              prefix={"📝"}
               value={formValues.body}
               name="body"
               onChange={onChangeInput}
               size="large"
+              className={`${isDarkMode ? s.antdInputDark:''}`}
             />
             <div
               type="submit"

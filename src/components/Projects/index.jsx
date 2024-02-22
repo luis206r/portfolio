@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./style.module.scss";
+import { BiSolidCameraMovie } from "react-icons/bi";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 export const Projects = () => {
-  {
-    /*https://mi-turno-web-deploy.vercel.app/*/
-  }
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    const matchMediaDark = window.matchMedia("(prefers-color-scheme: dark)");
+    setIsDarkMode(matchMediaDark.matches);
+
+    const handleChange = (event) => {
+      setIsDarkMode(event.matches);
+    };
+
+    matchMediaDark.addListener(handleChange);
+
+    return () => {
+      matchMediaDark.removeListener(handleChange);
+    };
+  }, []);
 
   return (
     <div className={s.container}>
@@ -14,57 +28,57 @@ export const Projects = () => {
           window.open("https://tmdb-front-nine.vercel.app", "_blank");
         }}
         style={{
-          background: "linear-gradient(to top right, #ebeed3, #bbdebd)",
+          background: `linear-gradient(to top right, ${
+            !isDarkMode ? "#ebeed3, #bbdebd" : "#2a6b6b,#4fba4d"
+          })`,
         }}
       >
         <div className={s.scHalf} style={{ marginRight: "10px" }}>
-          <h1>🎬 The Movie DataBase ↗️</h1>
+          <h1>
+            The Movie DataBase &nbsp; <BsArrowUpRightCircleFill />
+          </h1>
+
           <p>
-            TMDb es una plataforma diseñada para ofrecer a los usuarios un
-            extenso catálogo de películas y series. La aplicación permite a los
-            usuarios registrarse, iniciar sesión, explorar información detallada
-            sobre las películas y series, agregar contenido a su lista de
-            favoritos y conectarse con otros entusiastas del cine y la
-            televisión.
+            TMDb is a platform designed to offer users an extensive catalog of
+            movies and series. The application allows users to register, log in,
+            explore detailed information about movies and series, add content to
+            their favorites list, and connect with other movie and television
+            enthusiasts.
           </p>
           <p>
-            <b>Registro y Autenticación:</b> Los usuarios pueden crear cuentas,
-            iniciar sesión y mantener su sesión activa gracias al uso de tokens
-            de autenticación, brindando una experiencia segura y personalizada.
+            <b>Registration and Authentication:</b> Users can create accounts,
+            log in, and keep their sessions active using authentication tokens,
+            providing a secure and personalized experience.
           </p>
           <p>
-            <b>Catálogo Detallado:</b> Aprovechando la API de TMDb, la
-            aplicación ofrece acceso a un amplio contenido de películas y
-            series, proporcionando información detallada y actualizada para
-            satisfacer los gustos de los usuarios.
+            <b>Detailed Catalog:</b> Leveraging the TMDb API, the application
+            provides access to a vast content library of movies and series,
+            offering detailed and updated information to cater to user
+            preferences.
           </p>
           <p>
-            <b>Listas de Favoritos:</b> Los usuarios tienen la posibilidad de
-            agregar o quitar contenido de sus listas de favoritos,
-            personalizando así su experiencia y marcando las películas y series
-            que más les gustan.
+            <b>Favorites Lists:</b> Users have the ability to add or remove
+            content from their favorites lists, customizing their experience and
+            marking the movies and series they love the most.
           </p>
           <p>
-            <b>Perfil de Usuario:</b> La aplicación brinda a los usuarios un
-            perfil personalizado donde pueden acceder a su información, ver sus
-            favoritos y explorar perfiles de otros usuarios, fomentando la
-            interacción y la comunidad dentro de la plataforma.
+            <b>User Profile:</b> The application provides users with a
+            personalized profile where they can access their information, view
+            their favorites, and explore profiles of other users, fostering
+            interaction and community within the platform.
           </p>
           <p>
-            <b>Filtrado por Año:</b> La función de filtrado por año facilita a
-            los usuarios la búsqueda de contenido específico, permitiéndoles
-            explorar películas y series lanzadas en años particulares.
+            <b>Filtering by Year:</b> The year filtering feature makes it easy
+            for users to search for specific content, allowing them to explore
+            movies and series released in particular years.
           </p>
           <p>
-            <b>Restablecimiento de Contraseña:</b> Los usuarios pueden
-            restablecer sus contraseñas de manera segura mediante un código de
-            verificación enviado a su correo electrónico, garantizando la
-            protección de sus cuentas.
+            <b>Password Reset:</b> Users can securely reset their passwords
+            through a verification code sent to their email, ensuring the
+            protection of their accounts.
           </p>
         </div>
-        <div className={s.scHalf}
-        style={{justifyContent:"space-evenly"}}
-        >
+        <div className={s.scHalf} style={{ justifyContent: "space-evenly" }}>
           <img
             src="./tmdb_scs.png"
             width="100%"
@@ -90,12 +104,12 @@ export const Projects = () => {
           window.open("https://mi-turno-web-deploy.vercel.app/", "_blank");
         }}
         style={{
-          background: "linear-gradient(to top left, #f0e5fc, #d7b3f7)",
+          background: `linear-gradient(to top left, ${
+            !isDarkMode ? "#f0e5fc, #d7b3f7" : "#521638,#004d79"
+          })`,
         }}
       >
-        <div className={s.scHalf}
-        style={{justifyContent:"space-evenly"}}
-        >
+        <div className={s.scHalf} style={{ justifyContent: "space-evenly" }}>
           <img
             src="./mtw_scs.png"
             width="100%"
@@ -114,42 +128,42 @@ export const Projects = () => {
           />
         </div>
         <div className={s.scHalf} style={{ marginLeft: "10px" }}>
-          <h1>📆 Mi turno web ↗️</h1>
+          <h1>
+            Mi turno web &nbsp; <BsArrowUpRightCircleFill />
+          </h1>
           <p>
-            Mi Turno Web es una aplicación web diseñada para simplificar el
-            proceso de reserva de turnos en empresas con múltiples sucursales
-            físicas. La plataforma permite una gestión eficiente de la cantidad
-            de clientes presentes en cada ubicación y facilita la administración
-            de los horarios disponibles.
+            Mi Turno Web is a web application designed to simplify the
+            appointment booking process for businesses with multiple physical
+            branches. The platform allows efficient management of the number of
+            customers present at each location and facilitates the
+            administration of available time slots.
           </p>
           <p>
-            <b>Reservas Personalizadas:</b> Cada sucursal tiene la capacidad de
-            ajustar la cantidad de clientes que puede atender simultáneamente,
-            así como definir los rangos horarios disponibles para las reservas.
+            <b>Customized Bookings:</b> Each branch has the ability to adjust
+            the number of customers it can serve simultaneously and define the
+            available time ranges for bookings.
           </p>
           <p>
-            <b>Duración de Turnos:</b> Los turnos tienen una duración fija de 15
-            minutos, lo que facilita la planificación y optimización del tiempo
-            tanto para la empresa como para los clientes.
+            <b>Appointment Duration:</b> Appointments have a fixed duration of
+            15 minutes, making it easy for both the company and customers to
+            plan and optimize their time.
           </p>
           <p>
-            <b>Cancelación Flexible:</b> Los usuarios tienen la flexibilidad de
-            cancelar sus reservas hasta con 2 horas de antelación,
-            proporcionando una experiencia conveniente y evitando inconvenientes
-            de último momento.
+            <b>Flexible Cancellation:</b> Users have the flexibility to cancel
+            their appointments up to 2 hours in advance, providing a convenient
+            experience and avoiding last-minute inconveniences.
           </p>
           <p>
-            <b>Panel Gráfico para Comercios:</b> La aplicación ofrece un panel
-            gráfico intuitivo para que los comercios visualicen fácilmente las
-            reservas realizadas. Esto facilita la gestión y organización de la
-            afluencia de clientes en tiempo real.
+            <b>Graphic Dashboard for Businesses:</b> The application offers an
+            intuitive graphic dashboard for businesses to easily visualize the
+            bookings made. This facilitates real-time management and
+            organization of customer flow.
           </p>
           <p>
-            <b>Métricas y Análisis:</b> Además de la funcionalidad básica, Mi
-            Turno Web proporciona herramientas de análisis que permiten a los
-            administradores obtener métricas basadas en las reservas realizadas.
-            Esto brinda información valiosa para la toma de decisiones y la
-            mejora continua del servicio.
+            <b>Metrics and Analysis:</b> In addition to basic functionality, Mi
+            Turno Web provides analysis tools that allow administrators to
+            obtain metrics based on the bookings made. This provides valuable
+            insights for decision-making and continuous service improvement.
           </p>
         </div>
       </div>
@@ -163,41 +177,44 @@ export const Projects = () => {
           );
         }}
         style={{
-          background: "linear-gradient(to top right, #eeeded, #ade0fa)",
+          background: `linear-gradient(to top right, ${
+            !isDarkMode ? "#eeeded, #ade0fa" : "#314e55,#21a9a8"
+          })`,
         }}
       >
         <div className={s.scHalf} style={{ marginRight: "10px" }}>
-          <h1>🛵 Fast Delivery (in Progress) ↗️</h1>
+          <h1>
+            {" "}
+            Fast Delivery (in Progress) &nbsp; <BsArrowUpRightCircleFill />
+          </h1>
           <p>
-            Fast Delivery es una aplicación diseñada para optimizar la operación
-            de repartidores en una empresa de última milla. La plataforma cuenta
-            con dos roles diferenciados: repartidores y administradores, cada
-            uno con funciones específicas para garantizar un flujo eficiente de
-            entregas.
+            Fast Delivery is an application designed to optimize the operation
+            of couriers in a last-mile delivery company. The platform features
+            two distinct roles: couriers and administrators, each with specific
+            functions to ensure an efficient flow of deliveries.
           </p>
           <p>
-            <b>Gestión de Repartidores:</b> Los administradores pueden acceder a
-            la nómina de repartidores registrados, visualizar cuántos están
-            activos con entregas en curso y conocer la cantidad de paquetes
-            asignados a cada repartidor.
+            <b>Courier Management:</b> Administrators can access the roster of
+            registered couriers, view how many are currently active with ongoing
+            deliveries, and know the quantity of packages assigned to each
+            courier.
           </p>
           <p>
-            <b>Creación y Edición de Paquetes:</b> La empresa puede crear,
-            visualizar y editar los paquetes que deben ser enviados, permitiendo
-            una gestión flexible y adaptativa.
+            <b>Creation and Editing of Packages:</b> The company can create,
+            view, and edit the packages to be sent, allowing flexible and
+            adaptive management.
           </p>
           <p>
-            <b>Geolocalización en Tiempo Real:</b> Se implementa la
-            geolocalización para visualizar en un mapa la ubicación actual de
-            cada repartidor y su ruta de entrega, proporcionando a los
-            administradores una visión en tiempo real de la operación.
+            <b>Real-Time Geolocation:</b> Geolocation is implemented to
+            visualize on a map the current location and delivery route of each
+            courier, providing administrators with a real-time view of the
+            operation.
           </p>
           <p>
-            <b>Sistema de Puntos y Penalizaciones:</b> Se introduce un sistema
-            de puntos para recompensar a los repartidores por paquetes
-            entregados exitosamente. También se incluyen penalizaciones por no
-            completar entregas, incentivando un desempeño eficiente y
-            cumplimiento de responsabilidades.
+            <b>Points and Penalties System:</b> A points system is introduced to
+            reward couriers for successfully delivered packages. Penalties are
+            also included for incomplete deliveries, encouraging efficient
+            performance and responsibility fulfillment.
           </p>
         </div>
         <div className={s.scHalf}>

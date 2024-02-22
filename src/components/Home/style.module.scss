@@ -1,8 +1,15 @@
 body{
     background-color: #f7eff0;
     color: #525252;
+    
     font-family: 'Manrope', sans-serif;  
 }
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #000000;
+      color: #dbdbdb;
+    }
+  }
 
 .header{
     display: flex;
@@ -97,6 +104,12 @@ body{
     z-index: 3;
 }
 
+@media (prefers-color-scheme: dark) {
+    .card:hover {
+        box-shadow: 0 0 20px 0px rgba(239, 238, 238, 0.566);
+    }
+  }
+
 .middleInsideCard{
     display:flex;
     justify-content: center;
@@ -106,6 +119,11 @@ body{
     backdrop-filter: blur(7.5px);
     border-radius: 30px;
     color:white
+}
+
+.middleInsideCard > h1{
+    display:flex;
+    align-items: center;
 }
 
 .appleMusicCard{
@@ -130,7 +148,7 @@ body{
 
 .appleMusicCard:hover{
     position: absolute;
-    transform: translateY(-17%)  translateX(-29%);
+    transform: translateY(-15%)  translateX(-27%);
     
     //top :62%;
     width: 700px ;
@@ -204,6 +222,12 @@ body{
     justify-content: left;
     text-align: left;  
 }
+
+.text > h2{
+    display:flex;
+    align-items: center;
+}
+
 
 b{
     font-size: 16px;

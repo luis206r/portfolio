@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import s from "./style.module.scss";
 import { FaCity } from "react-icons/fa6";
 import { PiStudentBold } from "react-icons/pi";
@@ -6,6 +6,11 @@ import { IoCalendarNumber } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
 
 export const About = () => {
+  useEffect(()=>{
+    const idiomaNavegador = navigator.language || navigator.userLanguage;
+
+console.log(`El idioma del navegador es: ${idiomaNavegador}`);
+  },[])
   return (
     <>
       <div className={s.container}>
@@ -88,7 +93,7 @@ export const About = () => {
         <div className={s.subContainer}></div>
         <div className={s.subContainer}></div>
       </div>
-      <footer className={s.footer}>hola</footer>
+      
     </>
   );
 };

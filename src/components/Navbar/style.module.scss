@@ -19,6 +19,11 @@
     border-radius: 25px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .navContentCenter {
+        background-color: #1a1a1a;
+    }
+  }
 
 .customButton{
     display: flex;
@@ -30,6 +35,12 @@
     padding: 10px;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,transform 0.3s ease;
 }
+
+@media (prefers-color-scheme: dark) {
+    .customButton{
+        background-color: #373636;
+    }
+  }
 
 .customButton:hover{
     background-color: #1596f1;

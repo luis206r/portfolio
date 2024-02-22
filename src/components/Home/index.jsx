@@ -1,8 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./style.module.scss";
 import { useNavigate } from "react-router-dom";
+import { FaPaintBrush } from "react-icons/fa";
+import { FaServer } from "react-icons/fa6";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 export const Home = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const matchMediaDark = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(matchMediaDark.matches);
+  
+    const handleChange = (event) => {
+      setIsDarkMode(event.matches);
+    };
+  
+    matchMediaDark.addListener(handleChange);
+  
+    return () => {
+      matchMediaDark.removeListener(handleChange);
+    };
+  }, []);
+
+
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -13,7 +34,7 @@ export const Home = () => {
             <div className={s.x2}>
               <div className={s.card}
                  style={{
-                  background: "linear-gradient(to top right, #eeeded, #ade0fa)"
+                  background: `linear-gradient(to top right, ${!isDarkMode ? '#eeeded, #ade0fa' : '#314e55,#21a9a8'} )`
                 }}
               >
                 <div className={s.info}>
@@ -83,7 +104,7 @@ export const Home = () => {
               >
                 {/* <img src="https://skillicons.dev/icons?i=git,bootstrap,cpp,java,css,discord,express,sequelize,github,html,js,linux,md,materialui,mysql,nextjs,postgres,nodejs,postman,py,react,redux,vscode&perline=9" /> */}
                 <div className={s.middleInsideCard}>
-                  <h1>See my projects ↗️</h1>
+                  <h1>See my projects &nbsp;<BsArrowUpRightCircleFill /></h1>
                 </div>
 
               </div>
@@ -94,7 +115,7 @@ export const Home = () => {
               <div className={s.card}
                 style={{
                   color:"white",
-                  background: "linear-gradient(to top right, #5acbf5, #55e9cb)"
+                  background: `linear-gradient(to top right, ${!isDarkMode ? '#5acbf5, #55e9cb' : '#2a6b6b,#4fba4d'})`
                 }}
               >
               <img src="https://skillicons.dev/icons?i=git,bootstrap,cpp,java,css,tailwind,ts,discord,nextjs,docker,express,sequelize,github,html,js,linux,md,materialui,mysql,nextjs,postgres,nodejs,postman,py,react,redux,vscode&perline=9" /> 
@@ -127,12 +148,12 @@ export const Home = () => {
           <div className={s.v}>
             <div className={s.card}
               style={{
-                background: "linear-gradient(to top, #ddc3fc, #90c5fb)"
+                background: `linear-gradient(to top, ${!isDarkMode? '#ddc3fc, #90c5fb':'#521638,#004d79'})`
               }}
             >
               <div className={s.text}>
                 <h1>Main Skills:</h1>
-                <h2>🖌️ Front end</h2>
+                <h2><FaPaintBrush /> &nbsp; Front end</h2>
                 <list>
                   <li>
                     <b>ReactJs</b>
@@ -150,7 +171,7 @@ export const Home = () => {
                   <li>Sass</li>
                   <li><b>Antd</b>, MaterialUI</li>
                 </list>
-                <h2>⚙️ Back end</h2>
+                <h2><FaServer /> &nbsp; Back end</h2>
                 <list>
                   <li><b>Node JS</b></li>
                   <li>Postgresql</li>
@@ -196,7 +217,7 @@ export const Home = () => {
                     borderRadius: 30,
                   }}
                   sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                  src="https://embed.music.apple.com/pe/playlist/favs/pl.u-NpXmzemC4JDAb1r?l=en-GB"
+                  src={`https://embed.music.apple.com/pe/playlist/favs/pl.u-NpXmzemC4JDAb1r?l=en-GB${isDarkMode ?'?theme=dark' : ''}`}
                 />
               </div>
             </div>

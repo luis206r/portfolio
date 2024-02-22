@@ -19,11 +19,23 @@
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+@media (prefers-color-scheme: dark) {
+    .subContainer {
+      background-color: #1a1a1a;
+    }
+  }
+
 .subContainer:hover{
     transform: scale(1.1); 
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
     z-index: 3;
 }
+
+@media (prefers-color-scheme: dark) {
+    .subContainer:hover {
+        box-shadow: 0 0 20px 0px rgba(239, 238, 238, 0.566);
+    }
+  }
 
 .scHalf{
     display: flex;
@@ -33,7 +45,14 @@
     //background-color: yellow;
     width: 50%;
     padding: 10px;
+    > h1{
+        display:flex;
+        align-items: center;
+    }
 }
+
+
+
 
 .scTercio{
     display: flex;
@@ -61,3 +80,9 @@
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
     z-index: 3;
 }
+
+@media (prefers-color-scheme: dark) {
+    .img2:hover {
+        box-shadow: 0 0 20px 0px rgba(239, 238, 238, 0.566);
+    }
+  }
