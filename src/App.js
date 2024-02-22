@@ -10,7 +10,10 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   useEffect(()=>{
-    navigate("/home")
+    var urlActual = window.location.href;
+    if(!urlActual.includes('projects') || !urlActual.includes('home') || !urlActual.includes('about')){
+      navigate("/home")
+    }
   },[])
 
   return (
