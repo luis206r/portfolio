@@ -80,7 +80,7 @@ export const Projects = () => {
         </div>
         <div className={s.scHalf} style={{ justifyContent: "space-evenly" }}>
           <img
-            src="./tmdb_scs.png"
+            src="tmdb_scs.png"
             width="100%"
             style={{
               borderRadius: "10px",
@@ -89,7 +89,7 @@ export const Projects = () => {
           />
           &nbsp;
           <img
-            src="./tmdb_scs2.png"
+            src="tmdb_scs2.png"
             width="100%"
             style={{
               borderRadius: "10px",
@@ -112,7 +112,7 @@ export const Projects = () => {
       >
         <div className={s.scHalf} style={{ justifyContent: "space-evenly" }}>
           <img
-            src="./mtw_scs.png"
+            src="mtw_scs.png"
             width="100%"
             style={{
               borderRadius: "10px",
@@ -121,7 +121,7 @@ export const Projects = () => {
           />
           &nbsp;
           <img
-            src="./mtw_scs2.png"
+            src="mtw_scs2.png"
             width="100%"
             style={{
               borderRadius: "10px",
@@ -221,7 +221,7 @@ export const Projects = () => {
         </div>
         <div className={s.scHalf}>
           <img
-            src="./fastD_scsb.png"
+            src="fastD_scsb.png"
             width="100%"
             style={{
               borderRadius: "10px",
@@ -245,7 +245,7 @@ export const Projects = () => {
         </div>
         <div className={s.scTercio}>
           <a href="https://bright-bonbon-0fc319.netlify.app/" target="_blank">
-            <img className={s.img2} src="./reminders-2021-05-28.png" />
+            <img className={s.img2} src="reminders-2021-05-28.png" />
           </a>
           <h2>To Do List</h2>
         </div>
@@ -254,7 +254,7 @@ export const Projects = () => {
             href="https://64c70811457ce75636868ceb--remarkable-syrniki-fdecb4.netlify.app/"
             target="_blank"
           >
-            <img className={s.img2} src="./colors.png" />
+            <img className={s.img2} src="colors.png" />
           </a>
           <h2>Color Game</h2>
         </div>

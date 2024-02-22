@@ -38,7 +38,7 @@ export const Home = () => {
                 }}
               >
                 <div className={s.info}>
-                  <img className={s.imageProf} src='./portfolio/zyro-image2.jpg'/>
+                  <img className={s.imageProf} src='zyro-image2.jpg'/>
                   <div className={s.text}>
                     <h1>About me:</h1>
                     <p>
@@ -52,7 +52,7 @@ export const Home = () => {
               <div
                 className={s.card}
                 style={{
-                  backgroundImage: 'url("./github.jpg")',
+                  backgroundImage: 'url("github.jpg")',
                   backgroundSize: "cover", // ajusta el tamaño de la imagen para cubrir completamente el div
                   backgroundPosition: "center",
                 }}
@@ -61,7 +61,7 @@ export const Home = () => {
                 }}
               >
                 <div className={s.bottomleft}>
-                  <img src="./link.png" style={{ width: "30px" }} />
+                  <img src="link.png" style={{ width: "30px" }} />
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ export const Home = () => {
             <div className={s.x2}>
               <div className={s.card}
                 style={{
-                  backgroundImage: 'url("./projects2.webp")',
+                  backgroundImage: 'url("projects2.webp")',
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   padding:"0px",
@@ -122,7 +122,7 @@ export const Home = () => {
               <div
                 className={s.card}
                 style={{
-                  backgroundImage: 'url("./linkedin2.svg")',
+                  backgroundImage: 'url("linkedin2.svg")',
                   backgroundSize: "cover", // ajusta el tamaño de la imagen para cubrir completamente el div
                   backgroundPosition: "center",
                   backgroundColor: "#0b86ca",
@@ -135,7 +135,7 @@ export const Home = () => {
                 }}
               >
                 <div className={s.bottomleft}>
-                  <img src="./link.png" style={{ width: "30px" }} />
+                  <img src="link.png" style={{ width: "30px" }} />
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@ export const Home = () => {
                     style={{
                       width: "100%",
                       height: "100%",
-                      backgroundImage: 'url("./apple-music.svg")',
+                      backgroundImage: 'url("apple-music.svg")',
                       backgroundSize: "cover", // ajusta el tamaño de la imagen para cubrir completamente el div
                       backgroundPosition: "center",
                     }}

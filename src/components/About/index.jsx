@@ -19,7 +19,7 @@ console.log(`El idioma del navegador es: ${idiomaNavegador}`);
             <div className={s.head}>
               <div className={s.head1}>
                 <div>
-                <img src="./prof-transformed.png" className={s.imgProf} />
+                <img src="prof-transformed.png" className={s.imgProf} />
                 <div className={s.head1Info}>
                 <div>
                 <h1>Luis Robledo</h1>
