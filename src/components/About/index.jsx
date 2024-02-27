@@ -4,58 +4,73 @@ import { FaCity } from "react-icons/fa6";
 import { PiStudentBold } from "react-icons/pi";
 import { IoCalendarNumber } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export const About = () => {
-  useEffect(()=>{
+  useEffect(() => {
     const idiomaNavegador = navigator.language || navigator.userLanguage;
 
-console.log(`El idioma del navegador es: ${idiomaNavegador}`);
-  },[])
+    console.log(`El idioma del navegador es: ${idiomaNavegador}`);
+  }, []);
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 1.5 } }}
+    >
       <div className={s.container}>
         <div className={s.subContainer}>
-          
-            <div className={s.head}>
-              <div className={s.head1}>
-                <div>
+          <div className={s.head}>
+            <div className={s.head1}>
+              <div>
                 <img src="prof-transformed.png" className={s.imgProf} />
                 <div className={s.head1Info}>
-                <div>
-                <h1>Luis Robledo</h1>
-                <p> <MdWork /> &nbsp; Full Stack Dev</p>
-                <p> <FaCity /> &nbsp; Lima, Perú</p>
-                <p> <PiStudentBold />&nbsp; CS-UTEC</p>
-                <p> <IoCalendarNumber />&nbsp; 22 years</p>
-                </div>
-                </div>
-              </div>
-              </div>
-              <div className={s.head2}>
-                <div>
-                  <h1>Main Skills</h1>
-                  <img src="https://skillicons.dev/icons?i=git,bootstrap,cpp,java,css,tailwind,ts,discord,nextjs,docker,express,sequelize,github,html,js,linux,md,r,matlab,androidstudio,bash,materialui,mysql,postgres,nodejs,postman,py,react,redux,vscode&perline=10" />
-                  <p>
-                    Git · Bootsrap · antd · R · C++ · Java · Css · Sass ·
-                    Tailwind · Typescript · NextJS · Docker · Express ·
-                    Sequelize · Github · HTML · JavaScript · Linux · MarkDown ·
-                    MaterialUI · MySQL · PostgresSQL · NodeJS · PostMan · Python
-                    · React · Redux · VSCode
-                  </p>
-                
-
-                
-                  <h1>Want to learn</h1>
-                  <img src="https://skillicons.dev/icons?i=net,swift,cs,angular,django,azure,googlecloud,php&perline=15" />
-                  <p>
-                    .Net · Swift · C# · Angular · DJango · Azure · GoogleCloud ·
-                    PHP · Lavarel
-                  </p>
+                  <div>
+                    <h1>Luis Robledo</h1>
+                    <p>
+                      {" "}
+                      <MdWork /> &nbsp; Full Stack Dev
+                    </p>
+                    <p>
+                      {" "}
+                      <FaCity /> &nbsp; Lima, Perú
+                    </p>
+                    <p>
+                      {" "}
+                      <PiStudentBold />
+                      &nbsp; CS-UTEC
+                    </p>
+                    <p>
+                      {" "}
+                      <IoCalendarNumber />
+                      &nbsp; 22 years
+                    </p>
                   </div>
+                </div>
               </div>
             </div>
-            <div className={s.line}/>
-            <div className={s.info}>
+            <div className={s.head2}>
+              <div>
+                <h1>Main Skills</h1>
+                <img src="https://skillicons.dev/icons?i=git,bootstrap,cpp,java,css,tailwind,ts,discord,nextjs,docker,express,sequelize,github,html,js,linux,md,r,matlab,androidstudio,bash,materialui,mysql,postgres,nodejs,postman,py,react,redux,vscode&perline=10" />
+                <p>
+                  Git · Bootsrap · antd · R · C++ · Java · Css · Sass · Tailwind
+                  · Typescript · NextJS · Docker · Express · Sequelize · Github
+                  · HTML · JavaScript · Linux · MarkDown · MaterialUI · MySQL ·
+                  PostgresSQL · NodeJS · PostMan · Python · React · Redux ·
+                  VSCode
+                </p>
+
+                <h1>Want to learn</h1>
+                <img src="https://skillicons.dev/icons?i=net,swift,cs,angular,django,azure,googlecloud,php&perline=15" />
+                <p>
+                  .Net · Swift · C# · Angular · DJango · Azure · GoogleCloud ·
+                  PHP · Lavarel
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className={s.line} />
+          <div className={s.info}>
             <p>
               I have experience in Full-Stack development with participation in
               key projects, and I possess extensive knowledge in different
@@ -93,7 +108,6 @@ console.log(`El idioma del navegador es: ${idiomaNavegador}`);
         <div className={s.subContainer}></div>
         <div className={s.subContainer}></div>
       </div>
-      
-    </>
+    </motion.div>
   );
 };
