@@ -51,7 +51,7 @@ export const Home = () => {
                     <div className={s.info}>
                       <img
                         className={s.imageProf}
-                        src='url("zyro-image2.png")'
+                        src='url("zyroimage2.png")'
                       />
                       <div className={s.text}>
                         <h1>About me:</h1>
