@@ -51,7 +51,7 @@ export const Home = () => {
                     <div className={s.info}>
                       <img
                         className={s.imageProf}
-                        src='url("zyroimage2.png")'
+                        src="https://github.com/luis206r/portfolio/blob/master/public/zyroimage2.png?raw=true"
                       />
                       <div className={s.text}>
                         <h1>About me:</h1>
